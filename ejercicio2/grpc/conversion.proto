@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+service Conversion{
+    rpc CelsiusFahrenheit (Operacion) returns (Resultado);
+    rpc FahrenheitCelsius (Operacion) returns (Resultado);
+}
+
+message Operacion{
+    float a=1;
+}
+
+message Resultado{
+    float r=1;
+}
